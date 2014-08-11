@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Head-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation project</title>
+    <!-- build:css css/libraries.min.css-->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css-->
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:css css/app.min.css-->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild-->
+    <!-- build:js js/vendor/modernizr.min.js-->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild--><link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]-->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <!-- Header-->
+      <header class="row container">
+        <div class="text-center small-8 small-offset-2 columns v-middle"><a href="#" name="CrimView - Online Background Check" class="logo"></a></div>
+        <div class="small-2 columns text-right v-middle">
+          <div class="row"><a href="#" data-reveal-id="loginModal" class="button round outline small no-margin btn-login">Client Login</a></div>
+        </div>
+      </header>
+      <!-- Main Navigation-->
+      <nav class="main-nav">
+        <div class="row container">
+          <div class="small-7 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="index.html" title="Home" class="selected">Home</a>
+              </li>
+              <li><a href="database-coverage.html" title="Database Coverage">Database Coverage</a>
+              </li>
+              <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+              </li>
+              <li><a href="contact.html" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Members Header & Menu-->
+      <section class="members-header">
+        <div class="row container">
+          <nav class="small-4 columns">
+            <ul class="inline-list text-center members-nav">
+              <li><a>My Orders          </a></li>
+              <li class="selected"><a href="members-profile.html">Edit Profile</a></li>
+              <li><a>Accounting</a></li>
+            </ul>
+          </nav>
+          <div class="small-2 columns small-offset-2 menu-members-btn-new-search"><a class="button radius tiny no-margin expand">New Search</a></div>
+          <div class="small-4 columns menu-members-search-order">
+            <form action="" data-abide>
+              <div class="row">
+                <div class="small-6 columns menu-members-search-order-field">
+                  <input type="text" name="search-order" placeholder="Order ID">
+                </div>
+                <div class="small-6 columns">
+                  <input type="submit" name="search-order-bt" value="Search Order" class="button radius tiny no-margin">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!--Content-->
+      <section class="row content">
+        <div class="small-8 columns small-centered">
+          <h3>Change your User Profile    </h3>
+          <form action="#" data-abide>
+            <div class="members-profile-fields">
+              <div>
+                <label>First Name
+                  <input type="text" name="edit-first-name" placeholder="Note For Dev: Change to Current First Name" pattern="alpha">
+                </label><small class="error">Name isn't valid. Please, try again.</small>
+              </div>
+              <div>
+                <label>Last Name
+                  <input type="text" name="edit-last-name" placeholder="Note For Dev: Change to Current Last Name" pattern="alpha">
+                </label><small class="error">Name isn't valid. Please, try again.</small>
+              </div>
+              <div>
+                <label>Email 
+                  <input type="email" name="edit-email" placeholder="Note For Dev: Change to Current email"><small class="error">E-mail isn't valid. Please, try again.</small>
+                </label>
+              </div>
+              <div>
+                <label>Password 
+                  <input type="password" name="edit-password" id="password" placeholder="Note For Dev: Change to Current Password">
+                </label>
+              </div>
+              <div>
+                <label>Password (Confirmation)
+                  <input type="password" name="edit-password-confirm" data-equalto="password" placeholder="Note For Dev: Change to Current Password">
+                </label><small class="error">The password did not match</small>
+              </div>
+            </div>
+            <input type="button" name="" value="Save changes" class="button radius small">
+          </form>
+        </div>
+      </section>
+      <!--Footer-->
+      <footer class="second-nav">
+        <div class="row container">
+          <nav class="small-6 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="#">Database Coverage</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <!--Modals-->
+    <div id="loginModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">Members Area</h4>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <form action="order-step-1.html" class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text">
+          </label>
+          <label>Password
+            <input type="password">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Log In" class="button dark-blue radius expand">
+        </div>
+      </form>
+    </div>
+    <div id="passwordRecoverModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">We'll send you<br> a new password</h4><a class="close-reveal-modal">&#215;</a>
+      <form class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text" placeholder="Type the e-mail you have registered">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
+        </div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+      </form>
+    </div>
+  </body>
+  <!-- build:js js/vendor/libraries.min.js-->
+  <!-- bower:js-->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- endbower-->
+  <!-- endbuild-->
+  <!-- build:js js/vendor/foundation.min.js-->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+  <!-- endbuild-->
+  <!-- build:js js/app.min.js-->
+  <script src="js/app.js"></script>
+  <!-- endbuild-->
+</html>

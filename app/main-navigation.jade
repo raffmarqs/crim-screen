@@ -1,0 +1,14 @@
+block link
+  -var selected = 'Home'; //default
+  -var menu = { 'Home': 'index.html', 'Database Coverage': 'database-coverage.html', 'Privacy Policy': 'privacy-policy.html', 'Contact': 'contact.html' };
+
+  nav.main-nav
+    div.row.container
+      .small-7.columns.small-centered
+        ul.inline-list.text-center
+          each val, key in menu
+            li
+              if selected === key
+                a.selected(href=val, title=key)= key
+              else
+                a(href=val, title=key)= key

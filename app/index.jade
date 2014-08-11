@@ -1,29 +1,76 @@
 doctype html
 html(class="no-js", lang="en")
-    include header
-    body
-        div.row
-            div(class="small-12 small-centered medium-10 medium-centered large-8 large-centered columns panel radius")
-                h1 Yo!
-                ul
-                    li Sass compiling (Ruby or Node/Libsass)
-                    li Jade templating engine (option)
-                    li Publishing to dist directory
-                    li Server with LiveReload
-                    li JSHint
-                    li Grunt Bower install
-                    li Imagemin
-                    li Font Awesome (option)
-                h1 Grunt tasks:
-                ul
-                    li 'grunt' - watching (Sass, Server on 127.0.0.1:9000 with LiveReload)
-                    li 'grunt compile-sass' - Sass
-                    li 'grunt compile-jade' - Jade
-                    li 'grunt validate-js' - JSHint
-                    li 'grunt bower-install' - injecting bower libraries
-                    li 'grunt publish' - dist directory
-                    li 'grunt server-dist' - server on 127.0.0.1:9001 - dist directory (preview only)
-                h2(class="text-right")
-                    a(href="https://github.com/juliancwirko/generator-zf5")
-                        i(class="fa fa-twitter")
-        include footer
+  include head
+  body
+    div.index
+      div.page-wrap
+        // Header
+        include Header
+
+        //Content
+        section.row.content
+          div.row
+            h1.small-10.columns.small-centered.text-center.heading-pitch Used by thousands of employers, schools, government agencies and private citizens for their criminal background checks.
+                    
+          div.row
+            // Left Column
+            div.small-6.columns 
+              // Search Box
+              div.row        
+                div.panel  
+                  h2.type-search-box-title Criminal Records & Background Checks
+                  form(action="")
+                    select(name="nav")
+                      option(value="") Select the Way You’d Like to Search
+                      option(value="search-state") Name and State (Less Acurate)
+                      option(value="search-dob") Name and Date of Birth (Very Acurate)
+                      option(value="search-ssn") Name and Social Security Number (Most Acurate)
+                    input(type="submit", value="Get Started", id="submit", class="button radius expand")
+              
+              // Testimonials
+              div.row
+                section.testimonials
+                  h3.testimonial-title Testimonials
+                  ul.no-bullet 
+                    li.testimonial-item
+                      blockquote.testimonial-quote “Our company installs garage exhaust hose in affluent residential homes, so we have to background check all employees. CrimScreen is the 3rd company we've used but will be the last. They do a great job. The results are always instant and accurate. They've saved me from hiring several people with extensive criminal background records.”
+                      p.text-right 
+                       | James Grayem<br><a href="http://www.crushproof-hose.com">crushproof-hose.com</a>
+                    li
+                      blockquote.testimonial-quote “Our company installs garage exhaust hose in affluent residential homes, so we have to background check all employees. CrimScreen is the 3rd company we've used but will be the last. They do a great job. The results are always instant and accurate. They've saved me from hiring several people with extensive criminal background records.”
+                      p.text-right 
+                       | James Grayem<br><a href="http://www.crushproof-hose.com">crushproof-hose.com</a>
+                    li
+                      blockquote.testimonial-quote “Our company installs garage exhaust hose in affluent residential homes, so we have to background check all employees. CrimScreen is the 3rd company we've used but will be the last. They do a great job. The results are always instant and accurate. They've saved me from hiring several people with extensive criminal background records.”
+                      p.text-right 
+                       | James Grayem<br><a href="http://www.crushproof-hose.com">crushproof-hose.com</a>
+            
+            // Right Column   
+            section.included-checks.small-5.small-offset-1.columns
+              h3.included-checks-title Our background check includes:
+              ul.included-checks-items.no-bullet
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipisicing elit,
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipisicing elit,
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipisicing elit,
+                li Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, consectetur adipisicing elit
+
+        // Navigation
+        footer
+          nav.main-nav
+            div.row.container
+              .small-7.columns.small-centered
+                ul.inline-list.text-center
+                  li: a(href="#") Database Coverage
+                  li: a(href="#") Privacy Policy
+                  li: a(href="#") Cart
+                  li: a(href="contact.html") Contact
+
+    //Modals
+    include modals
+
+        include scripts

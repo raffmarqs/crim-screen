@@ -1,0 +1,327 @@
+extends layout-template
+
+block content
+  // Page Title
+  h1.text-center Complete order
+
+  // Table Cart
+  .row
+    table.cart.small-12.columns.flat-bottom
+      thead
+        tr
+          th Search Details
+          th Unit Price
+          th Quantity
+          th Price
+          th Edit/Action
+      tbody
+        tr
+          td.text-left
+            p Alaska Criminal Record Search
+            ul.small-block-grid-2
+              li
+                span.parameters-title First Name
+                br
+                | Thomas
+              li    
+                span.parameters-title Last Name
+                br
+                | Green
+              li
+                span.parameters-title State
+                br
+                | AK
+              li
+                span.parameters-title Date of Birth
+                br
+                | 03/12/19 79
+
+          td $18.95
+          td 1
+          td $18.95
+          td: a(href="#", name="Order-number", class="btn-remove")
+                  i.fa.fa-times-circle
+                  | Remove
+
+    .cart-expansion.small-12.columns
+      .small-6.columns.small-centered
+        a.button.green.radius.expand Add an additional person to your search
+
+  // Order Information 
+  .row.order-information.small-6.columns.small-centered
+    form(action="", data-abide)
+      // Billing Information
+      .row.billing-info
+        .row
+          h3.small-12.columns Personal Information
+        
+        .row
+            //Left Column
+            .small-6.columns
+              div
+                label 
+                  | First Name
+                  input(type="text", name="personal-info-first-name", tabindex="1", required, pattern='alpha')
+                small.error This Name isn't valid. Please, try again.
+              
+              div
+                label
+                  | Email
+                  input(type="email", id="email-field", name="personal-info-email", tabindex="3", required, pattern="email")
+                small.error This Email isn't valid. Please, try again.
+              
+              div
+                label
+                  | Billing Address 1
+                  input(type="text", name="personal-info-address-1", tabindex="5", required)
+                small.error This Address isn't valid. Please, try again.
+              
+              div
+                label
+                  | City
+                  input(type="text", name="personal-info-city", tabindex="7", required, pattern='[a-z A-Z]+')
+                small.error This City isn't valid. Please, try again.
+              
+              div
+                label
+                  | Zip Code
+                  input(type="text", name="personal-info-zip", tabindex="9", required)
+                small.error This Zip Code isn't valid. Please, try again.
+                
+            //Right Column
+            .small-6.columns
+              div
+                label
+                  | Last Name
+                  input(type="text", name="personal-info-last-name", tabindex="2", required, pattern='alpha')
+                small.error This Name isn't valid. Please, try again.
+              
+              div
+                label
+                  | Email&nbsp;(Confirm)
+                  input(type="email", name="personal-info-email", tabindex="4", required, data-equalto="email-field")
+                small.error Please, type the exact same email you entered before.
+              
+              div
+                label
+                  | Billing Address 2
+                  input(type="text", name="personal-info-address-2", tabindex="6")
+              
+              div
+                label 
+                  | State
+                  select(name="personal-info-state", tabindex="8", required)
+                    option(value="", disabled, selected) Please Select
+                    option(value="AL") Alabama
+                    option(value="AK") Alaska
+                    option(value="AZ") Arizona
+                    option(value="AR") Arkansas
+                    option(value="CA") California
+                    option(value="CO") Colorado
+                    option(value="CT") Connecticut
+                    option(value="DE") Delaware
+                    option(value="DC") District Of Columbia
+                    option(value="FL") Florida
+                    option(value="GA") Georgia
+                    option(value="HI") Hawaii
+                    option(value="ID") Idaho
+                    option(value="IL") Illinois
+                    option(value="IN") Indiana
+                    option(value="IA") Iowa
+                    option(value="KS") Kansas
+                    option(value="KY") Kentucky
+                    option(value="LA") Louisiana
+                    option(value="ME") Maine
+                    option(value="MD") Maryland
+                    option(value="MA") Massachusetts
+                    option(value="MI") Michigan
+                    option(value="MN") Minnesota
+                    option(value="MS") Mississippi
+                    option(value="MO") Missouri
+                    option(value="MT") Montana
+                    option(value="NE") Nebraska
+                    option(value="NV") Nevada
+                    option(value="NH") New Hampshire
+                    option(value="NJ") New Jersey
+                    option(value="NM") New Mexico
+                    option(value="NY") New York
+                    option(value="NC") North Carolina
+                    option(value="ND") North Dakota
+                    option(value="OH") Ohio
+                    option(value="OK") Oklahoma
+                    option(value="OR") Oregon
+                    option(value="PA") Pennsylvania
+                    option(value="RI") Rhode Island
+                    option(value="SC") South Carolina
+                    option(value="SD") South Dakota
+                    option(value="TN") Tennessee
+                    option(value="TX") Texas
+                    option(value="UT") Utah
+                    option(value="VT") Vermont
+                    option(value="VA") Virginia
+                    option(value="WA") Washington
+                    option(value="WV") West Virginia
+                    option(value="WI") Wisconsin
+                    option(value="WY") Wyoming  
+                small.error Please, select a State.                  
+              
+              div
+                label
+                  | Phone Number
+                  input(type="text", name="personal-info-phone", tabindex="10", required, pattern='number')
+                small.error Phone number isn't valid. Don't use spaces, dashes or parenthesis.  
+
+      // Credit Card Information 
+      .row.credit-card-info        
+        .row
+          h3.small-12.columns Credit Card Information          
+        .row
+          form(class="small-12 columns", action="")
+
+            // Payment Method 
+            .payment-method
+              // In-house Credit Card 
+              ul.small-block-grid-5
+                li
+                  label.credit-cards(for="mastercard")
+                    input(type="radio", name="payment-method", id="mastercard-payment", value="mastercard", tabindex="11")
+                    img(src="images/icon-mastercard.png", alt="")
+                li
+                  label.credit-cards(for="visa")
+                    input(type="radio", name="payment-method", id="visa-payment", value="visa", tabindex="12")
+                    img(src="images/icon-visa.png",alt="")
+                li
+                  label.credit-cards(for="amex")
+                    input(type="radio", name="payment-method", id="amex-payment", value="amex", tabindex="13")
+                    img(src="images/icon-amex.png", alt="")
+                li
+                  label.credit-cards(for="discover")
+                    input(type="radio", name="payment-method", id="discover-payment", value="discover", tabindex="14")
+                    img(src="images/icon-discover.png", alt="")        
+
+                // PayPal Payment 
+                li
+                  label.credit-cards(for="paypal")
+                    input(type="radio", name="payment-method", id="paypal-payment", value="paypal", tabindex="15")
+                    img(src="images/icon-paypal.png", alt="")                               
+                
+              small.error Testing an error
+              // Credit Card Form 
+              div.row#cc-form
+
+                //Left Column
+                .small-6.columns
+                  div
+                    label
+                      | First name on card
+                      input(type="text", name="", placeholder="ex: JOHN", tabindex="16", required, pattern="alpha")
+                    small.error Name isn't valid. Please, try again.
+                  
+                  div
+                    label
+                      | Credit Card Number
+                      input(type="text", name="", placeholder="Only Numbers - Without Space", tabindex="18", required, pattern="card")
+                    small.error Number isn't valid. Please, type only numbers without spaces.
+                  
+                  div
+                    label Expiration Date (Month)
+                      select(name="", id="", tabindex="20", required)
+                        option(value="", selected, disabled) Please Select
+                        option(value="01") (01) Jan
+                        option(value="02") (02) Feb
+                        option(value="03") (03) Mar
+                        option(value="04") (04) Apr
+                        option(value="05") (05) May
+                        option(value="06") (06) Jun
+                        option(value="07") (07) Jul
+                        option(value="08") (08) Aug
+                        option(value="09") (09) Sep
+                        option(value="10") (10) Oct
+                        option(value="11") (11) Nov
+                        option(value="12") (12) Dec
+                    small.error Please, select an Expiration Date.
+                    
+                  
+                //Right Column
+                .small-6.columns  
+                  div               
+                    label
+                      |Last Name on card
+                      input(type="text", name="", placeholder="ex: SMITH", tabindex="17", required, pattern="alpha")
+                    small.error Name isn't valid. Please, try again.
+                  
+                  div
+                    label
+                      | CVV&nbsp;(Security Code on Back of Card)
+                      .row
+                        .small-10.columns
+                          div
+                            input(type="text", name="", tabindex="19", required, pattern="cvv")
+                            small.error Security Code isn't valid. Please, Try again.
+
+                        .small-2.columns
+                          img(src="images/icon-credit.png", alt="")
+                                                
+                  div
+                    label
+                      | Expiration Date (Year)
+                      select(name="", id="", tabindex="21", required)
+                        option(value="", selected, disabled) Please Select
+                        option(value="2015") 2015
+                        option(value="2016") 2016
+                        option(value="2017") 2017
+                        option(value="2018") 2018
+                    small.error Please, select an Expiration Year.
+      
+      // Agreement & Terms Information 
+      .row.terms-conditions       
+        .small-12.columns 
+          h4.terms-conditions-title Agreement
+          .terms-conditions-content
+            label(for="",tabindex="22")
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              ul
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+                li Lorem ipsum dolor sit amet
+              
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            
+          // Agreement checkbox
+          .row
+            .small-12.columns              
+              input(type="checkbox", name="", id="terms-agreement-check", value="I agree with the Terms and Conditions and Coverage Policy", tabindex="23", required)
+              label(for="terms-agreement-check") I have read and agree with the <a href="#">Terms and Conditions</a> and <a href="#">Coverage Policy</a>
+
+    
+      // Credit Card Information 
+      div.row#cc-btn
+        .small-4.small-centered.columns
+          input(type="submit", value="Complete Order", class="button radius expand", tabindex="24")
+        
+      // Paypal Button 
+      div.row#pp-btn
+        .small-8.small-centered.columns
+          input(type="submit", value="Complete Order using your Paypal Account", class="button radius expand", tabindex="24")
+
+        // --- End: Order Information ---        
+      
+
+block append-to-scripts
+  script.
+    $( document ).ready(function() {
+      $( ".credit-cards").click(function() {
+        if ($('#paypal-payment').prop('checked') == true) {
+         $('#pp-btn').css("display","block");
+         $('#cc-btn').css("display","none");
+         $('#cc-form').css("display","none");
+        }
+        else{
+         $('#pp-btn').css("display","none");
+         $('#cc-btn').css("display","block");
+         $('#cc-form').css("display","block");
+        }
+      });      
+    });    

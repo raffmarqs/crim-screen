@@ -1,0 +1,59 @@
+extends layout-template
+
+block content
+  // Side Menu
+  div.small-2.columns.menu-side
+    a.button.green.radius.small.expand.no-margin New Search
+    hr
+    ul.no-bullet.text-left
+      li.selected: a My Orders
+      li: a(href="members-profile.html") Edit Profile
+      li: a Logout
+    hr
+    form(action="")
+      input(type="text", name="search-order")
+      input(type="submit", name="search-order-bt", value="Search Order", class="button green radius small expand no-margin")  
+
+  // Reports
+  .small-10.columns.members-content
+    h1 
+    | Welcome to CrimView Customer Account Interface
+    br
+    small Please take the time to explore all new and exciting products we have to offer
+
+    table.small-12.columns.radius
+      thead
+        tr
+          th Order ID
+          th Date
+          th Time
+          th Records
+          th First Name
+          th Last Name
+          th SSN
+          th &nbsp;
+      tbody
+        tr
+          td 12345
+          td 09 / 20 / 2010
+          td 11:08:17 AM
+          td 1228
+          td Thomas
+          td Green
+          td 246-##-####
+          td: a.button.blue.radius.expand.small.no-border
+                i.fa.fa-folder-open-o.fa-lg.icon-pdf
+                | Open
+          tr
+          td 12345
+          td 09 / 20 / 2010
+          td 11:08:17 AM
+          td 1228
+          td Thomas
+          td Green
+          td 246-##-####
+          td: a.button.blue.radius.expand.small.no-border
+                i.fa.fa-file-pdf-o.fa-lg.icon-pdf
+                | Open
+
+  block append-to-scripts

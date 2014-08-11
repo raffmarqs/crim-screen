@@ -1,0 +1,96 @@
+extends layout-template
+
+block content
+
+  // Search Form
+  section.small-6.columns
+    //Heading
+    h1.search-form-title.text-center
+      | Search by:
+      br
+      span.normal-weight Name and State
+    
+    //Form
+    div.panel
+      form.form-search(method='post', action='#', data-abide)
+        
+        // Form : First Name              
+        div
+          input(type='text', placeholder='First Name', name='first-name', required, pattern='alpha')
+          small.error.text-center This name isn't valid.<br>Please, try again.
+        
+        // Form : Last Name
+        div
+          input(type='text', placeholder='Last Name', name='last-name', required, pattern='alpha')
+          small.error.text-center This name isn't valid.<br>Please, try again.
+        
+        // Form : State              
+        select(name='state', required)
+          option(selected='', disabled='', value='') State
+          option(value='AL') Alabama
+          option(value='AK') Alaska
+          option(value='AZ') Arizona
+          option(value='AR') Arkansas
+          option(value='CA') California
+          option(value='CO') Colorado
+          option(value='CT') Connecticut
+          option(value='DE') Delaware
+          option(value='DC') District Of Columbia
+          option(value='FL') Florida
+          option(value='GA') Georgia
+          option(value='HI') Hawaii
+          option(value='ID') Idaho
+          option(value='IL') Illinois
+          option(value='IN') Indiana
+          option(value='IA') Iowa
+          option(value='KS') Kansas
+          option(value='KY') Kentucky
+          option(value='LA') Louisiana
+          option(value='ME') Maine
+          option(value='MD') Maryland
+          option(value='MA') Massachusetts
+          option(value='MI') Michigan
+          option(value='MN') Minnesota
+          option(value='MS') Mississippi
+          option(value='MO') Missouri
+          option(value='MT') Montana
+          option(value='NE') Nebraska
+          option(value='NV') Nevada
+          option(value='NH') New Hampshire
+          option(value='NJ') New Jersey
+          option(value='NM') New Mexico
+          option(value='NY') New York
+          option(value='NC') North Carolina
+          option(value='ND') North Dakota
+          option(value='OH') Ohio
+          option(value='OK') Oklahoma
+          option(value='OR') Oregon
+          option(value='PA') Pennsylvania
+          option(value='RI') Rhode Island
+          option(value='SC') South Carolina
+          option(value='SD') South Dakota
+          option(value='TN') Tennessee
+          option(value='TX') Texas
+          option(value='UT') Utah
+          option(value='VT') Vermont
+          option(value='VA') Virginia
+          option(value='WA') Washington
+          option(value='WV') West Virginia
+          option(value='WI') Wisconsin
+          option(value='WY') Wyoming
+        small.error.text-center Please, select a state.
+        
+        // Form : Button  
+        input.button.radius.small.expand.form-search-btn(type='submit', value='Start Search')
+
+  // Security Text
+  section.small-5.small-offset-1.columns.panel.security-info
+    h2.security-info-title Our background check includes:
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+    p
+      | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Laboris nisi ut aliquip ex ea commodo consequat minim veniam, quis nostrud enim.
+      br
+      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+    img.security-info-bg(alt='', src='images/bg-lock-icon.png')

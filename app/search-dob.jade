@@ -1,0 +1,96 @@
+extends layout-template
+
+block content
+
+  // Search Form
+  section.small-6.columns
+    //Heading
+    h1.search-form-title.text-center
+      | Search by:
+      br
+      span.normal-weight Name and Date of Birth
+    
+    //Form
+    div.panel
+      form.form-search(method='post', action='#', data-abide)
+
+        // Form : First Name              
+        div
+          input(type='text', placeholder='First Name', name='first-name', required, pattern='alpha')
+          small.error.text-center This name isn't valid.<br>Please, try again.
+        
+        // Form : Last Name              
+        div
+          input(type='text', placeholder='Last Name', name='last-name', required, pattern='alpha')
+          small.error.text-center This name isn't valid.<br>Please, try again.
+        
+        // Form : DOB              
+        ul.small-block-grid-3
+          li          
+            select.form-search-dob(name='year')
+              option(selected, disabled, value='') Year*
+          li
+            select.form-search-dob(name='month')
+              option(selected, disabled, value='') Month*
+              option(value='January') (01) Jan
+              option(value='February') (02) Feb
+              option(value='March') (03) Mar
+              option(value='April') (04) Apr
+              option(value='May') (05) May
+              option(value='June') (06) Jun
+              option(value='July') (07) Jul
+              option(value='August') (08) Aug
+              option(value='September') (09) Sep
+              option(value='October') (10) Oct
+              option(value='November') (11) Nov
+              option(value='December') (12) Dec
+          li
+            select.form-search-dob(name='day')
+              option(selected, disabled, value='') Day*
+              option(value='1') 1
+              option(value='2') 2
+              option(value='3') 3
+              option(value='4') 4
+              option(value='5') 5
+              option(value='6') 6
+              option(value='7') 7
+              option(value='8') 8
+              option(value='9') 9
+              option(value='10') 10
+              option(value='11') 11
+              option(value='12') 12
+              option(value='13') 13
+              option(value='14') 14
+              option(value='15') 15
+              option(value='16') 16
+              option(value='17') 17
+              option(value='18') 18
+              option(value='19') 19
+              option(value='20') 20
+              option(value='21') 21
+              option(value='22') 22
+              option(value='23') 23
+              option(value='24') 24
+              option(value='25') 25
+              option(value='26') 26
+              option(value='27') 27
+              option(value='28') 28
+              option(value='29') 29
+              option(value='30') 30
+              option(value='31') 31            
+        small.error Please, select a Date of Birth.
+        
+        // Form : Button  
+        input.button.radius.small.expand.form-search-btn(type='submit', value='Start Search')
+
+  // Security Text
+  section.small-5.small-offset-1.columns.panel.security-info
+    h2.security-info-title Our background check includes:
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+    p
+      | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Laboris nisi ut aliquip ex ea commodo consequat minim veniam, quis nostrud enim.
+      br
+      | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+    img.security-info-bg(alt='', src='images/bg-lock-icon.png')

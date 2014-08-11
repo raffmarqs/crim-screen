@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: '<%= app %>/',
-					src: ['**/*.jade', '!**/header.jade', '!**/footer.jade'],
+					src: ['**/*.jade','!**/head.jade', '!**/header.jade', '!**/main-navigation.jade', '!**/second-navigation.jade','!**/modals.jade', '!**/scripts.jade'],
 					ext: '.html',
 					dest: '<%= app %>/'
 				}]
@@ -49,7 +49,8 @@ module.exports = function(grunt) {
 			},
 			all: [
 				'Gruntfile.js',
-				'<%= app %>/js/**/*.js'
+				'<%= app %>/js/**/*.js',
+        '!<%= app %>/js/owl.carousel.min.js'
 			]
 		},
 
@@ -71,7 +72,19 @@ module.exports = function(grunt) {
 					src: ['<%= app %>/bower_components/font-awesome/fonts/**'],
 					dest: '<%= dist %>/fonts/',
 					filter: 'isFile'
-				} ]
+				} , {
+          expand: true,
+          flatten: true,
+          src: ['<%= app %>/js/owl.carousel.min.js'],
+          dest: '<%= dist %>/js/',
+          filter: 'isFile'
+        }, {
+          expand: true,
+          flatten: true,
+          src: ['<%= app %>/css/owl.carousel.css'],
+          dest: '<%= dist %>/css/',
+          filter: 'isFile'
+        } ]
 			},
 		},
 
@@ -165,26 +178,19 @@ module.exports = function(grunt) {
 				]
 			}
 		},
-    
+
     ftpush: {
       build: {
         auth: {
-          host: 'server.com',
+          host: 'ftp.therezabasbaum.com.br',
           port: 21,
           authKey: 'key1'
         },
-        src: 'path/to/source/folder',
-        dest: '/path/to/destination/folder',
-        exclusions: ['path/to/source/folder/**/.DS_Store', 'path/to/source/folder/**/Thumbs.db', 'dist/tmp'],
-        // keep: ['/important/images/at/server/*.jpg'],
-      }
-    }
-
-    uncss: {
-      dist: {
-        files: {
-          '<%= dist %>/css/tidy.css': ['<%= app %>/*.html']
-        }
+        src: '/Users/dotgridline/Documents/_Work_/_site/crimScan/site/dist',
+        dest: 'public_html/dotgridline/demo/crimscan',
+        exclusions: ['/Users/dotgridline/Documents/_Work_/_site/crimScan/site/dist/.DS_Store', '/Users/dotgridline/Documents/_Work_/_site/crimScan/site/dist/Thumbs.db', 'dist/tmp'],
+        simple: false,
+        useList: false
       }
     }
 
@@ -198,14 +204,10 @@ module.exports = function(grunt) {
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
-	grunt.registerTask('upload', ['ftpush']);
-  grunt.registerTask('tidy', ['uncss']);
+	grunt.registerTask('upload', ['ftpush:build']);
 
-
-  grunt.registerTask('compile', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
-
-  grunt.registerTask('fast-publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'upload']);
+  grunt.registerTask('compile', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
   
-  grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'uncss', 'upload']);
+  grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin', 'upload']);
 
 };

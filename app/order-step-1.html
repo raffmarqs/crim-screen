@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Head-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation project</title>
+    <!-- build:css css/libraries.min.css-->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+    <!-- bower:css-->
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:css css/app.min.css-->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/app_override.css">
+    <!-- endbuild-->
+    <!-- build:js js/vendor/modernizr.min.js-->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild--><link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]-->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <!-- Header-->
+      <header class="row container">
+        <div class="text-center small-8 small-offset-2 columns v-middle"><a href="#" name="CrimView - Online Background Check" class="logo"></a></div>
+        <div class="small-2 columns text-right v-middle">
+          <div class="row"><a href="#" data-reveal-id="loginModal" class="button round outline small no-margin btn-login">Client Login</a></div>
+        </div>
+      </header>
+      <!-- Main Navigation-->
+      <nav class="main-nav">
+        <div class="row container">
+          <div class="small-7 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="index.html" title="Home" class="selected">Home</a>
+              </li>
+              <li><a href="database-coverage.html" title="Database Coverage">Database Coverage</a>
+              </li>
+              <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+              </li>
+              <li><a href="contact.html" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Content-->
+      <section class="row content">
+        <!-- Searching Parameters-->
+        <section class="search-parameters">
+          <h1 class="search-parameters-heading">You are searching for records on</h1>
+          <ul class="small-block-grid-2 parameters-list">
+            <li><span class="parameters-title">First Name</span><br>Thomas</li>
+            <li><span class="parameters-title">Last Name</span><br>Thomas</li>
+            <li><span class="parameters-title">State</span><br>NC</li>
+            <li><span class="parameters-title">Date of Birth</span><br>1979 / 03 / 07</li>
+          </ul>
+        </section>
+        <!-- State search-->
+        <section class="stateChoice">
+          <form action="#" data-abide>
+            <select name="state">
+              <option selected="" disabled="" value="">State</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District Of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select><small class="error">Please, select one state above.</small>
+          </form>
+          <section class="stateChoice-info">
+            <ul class="small-block-grid-3">
+              <li><span class="stateChoice-info-title">Availability</span><br>Instant</li>
+              <li><span class="stateChoice-info-title">Price</span><br>$18.95</li>
+              <li><span class="stateChoice-info-title">Coverage</span><br><a href="#" data-reveal-id="coverage-modal">Click Here</a></li>
+            </ul>
+            <input type="submit" value="Order Now" class="button radius expand"><img alt="United States of America Map" src="images/bg-us-states.png" class="usa-map">
+          </section>
+        </section>
+        <!-- Modal-->
+        <div id="coverage-modal" data-reveal class="reveal-modal">
+          <div>
+            <h2 class="coverage-modal-title">Arizona Criminal Record Search</h2><a class="close-reveal-modal close-x">&#215;</a>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <ul class="coverage-modal-list">
+            <li>
+              <dl>
+                <dt>Arizona Court Records</dt>
+                <dd>Court records of statewide felony and misdemeanor dispositions from all counties except Pima and Maricopa since 1987. Results may show the defendant's name, DOB, identification number, record type, charge(s), disposition, physical description and sentence. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Corrections Records</dt>
+                <dd>Corrections records of statewide felony criminal convictions on persons who have been sentenced to serve time at a state facility since 1985. Results may show the defendant's name, DOB, identification number, record type, charge(s), disposition, disposition date, physical description and sentence. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Pima County (metro Tucson) Court Records</dt>
+                <dd>Court records of felony and misdemeanor dispositions since 1990. Search results may show the defendant's name, DOB, charges(s), disposition, disposition date, physical description and sentence. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Maricopa County Inmate Records</dt>
+                <dd>Countywide felony, misdemeanor and traffic violation records. Search results may show the defendant's name, DOB, sex, race, height, weight, hair&eye color and booking date. These records do not mean a guilty charge on the person searched. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Sex Offender Records</dt>
+                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Sex Offender Records</dt>
+                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Sex Offender Records</dt>
+                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Sex Offender Records</dt>
+                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Sex Offender Records</dt>
+                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>Arizona Sex Offender Records</dt>
+                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Footer-->
+      <footer class="second-nav">
+        <div class="row container">
+          <nav class="small-6 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="#">Database Coverage</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <!--Modals-->
+    <div id="loginModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">Members Area</h4>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <form action="order-step-1.html" class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text">
+          </label>
+          <label>Password
+            <input type="password">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Log In" class="button dark-blue radius expand">
+        </div>
+      </form>
+    </div>
+    <div id="passwordRecoverModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">We'll send you<br> a new password</h4><a class="close-reveal-modal">&#215;</a>
+      <form class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text" placeholder="Type the e-mail you have registered">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
+        </div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+      </form>
+    </div>
+  </body>
+  <!-- build:js js/vendor/libraries.min.js-->
+  <!-- bower:js-->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- endbower-->
+  <!-- endbuild-->
+  <!-- build:js js/vendor/foundation.min.js-->
+  <script src="bower_components/foundation/js/foundation/foundation.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.abide.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.accordion.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.alert.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.clearing.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.dropdown.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.magellan.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.offcanvas.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.reveal.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.slider.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.tab.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.tooltip.js"></script>
+  <script src="bower_components/foundation/js/foundation/foundation.topbar.js"></script>
+  <!-- endbuild-->
+  <!-- build:js js/app.min.js-->
+  <script src="js/app.js"></script>
+  <!-- endbuild-->
+</html>
