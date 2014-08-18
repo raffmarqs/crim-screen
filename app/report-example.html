@@ -47,12 +47,13 @@
         </div>
       </nav>
       <!--Content-->
-      <section class="row content">
+      <section class="row container content">
         <ul class="breadcrumbs">
-          <li><a href="#">All Reports</a></li>
-          <li class="current"><a href="#">Cloning </a></li>
+          <li><a href="members-orders.html">All Reports</a></li>
+          <li class="current"><a href="#">Report 12345</a></li>
         </ul>
-        <div class="btn_print"><a href="javascript:window.print()" class="button radius">Print this Report</a><small class="text-italic">Printer-friendly version</small></div>
+        <div class="btn-print-report"><a href="javascript:window.print()" class="button radius">Print this Report</a><small class="text-italic text-center">Printer-friendly version</small></div>
+        <!--Report Header  -->
         <section class="report-order-information">
           <h1 class="text-center">Report 12345</h1>
           <ul class="small-block-grid-3 report-parameters-list small-8 columns small-centered">
@@ -64,127 +65,148 @@
             <li><span class="parameters-title">Time</span>&nbsp;11:08:17 AM </li>
           </ul>
         </section>
-        <section class="text-center">
-          <h2 class="report-section-heading">Social Security Number Information<br><small>Search Criteria</small></h2>
-          <p class="text-italic">Social Security Number 222-##-####</p>
+        <!--Report Section-->
+        <section>
+          <section class="report-section-title">
+            <h2>Social Security Number Information    </h2>
+            <p class="text-italic">Social Security Number 222-##-####</p>
+          </section>
+          <div class="row">
+            <table class="small-12 columns">
+              <thead class="table-header">
+                <tr>
+                  <th>Social Security Number </th>
+                  <th>Date of Birth </th>
+                  <th>Deceased </th>
+                  <th>Issued </th>
+                </tr>
+              </thead>
+              <tbody class="table-content">
+                <tr>
+                  <td>246-##-### </td>
+                  <td>## / ## / 1943 </td>
+                  <td>No </td>
+                  <td>NC (1957-1958) </td>
+                </tr>
+                <tr class="last-row">
+                  <td>246-##-### </td>
+                  <td>## / ## / 1943 </td>
+                  <td>No </td>
+                  <td>NC (1957-1958) </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
-        <table class="small-12 columns">
-          <thead class="table-header">
-            <tr>
-              <th>Social Security Number </th>
-              <th>Date of Birth </th>
-              <th>Deceased </th>
-              <th>Issued </th>
-            </tr>
-          </thead>
-          <tbody class="table-content">
-            <tr>
-              <td>246-##-### </td>
-              <td>## / ## / 1943 </td>
-              <td>No </td>
-              <td>NC (1957-1958) </td>
-            </tr>
-            <tr class="last-row">
-              <td>246-##-### </td>
-              <td>## / ## / 1943 </td>
-              <td>No </td>
-              <td>NC (1957-1958) </td>
-            </tr>
-          </tbody>
-        </table>
-        <hr class="divisor-section_big">
-        <section class="report-subheading">
-          <h2>Possible Relatives<br><span>Search Criteria</span></h2>
-          <p>Social Security Number</p>
+        <hr class="divisor-section-big">
+        <!--Report Section-->
+        <section>
+          <!--Section Title-->
+          <section class="report-section-title">
+            <h2>Possible Relatives</h2>
+            <p class="text-italic">Social Security Number 222-##-####</p>
+          </section>
+          <!--Sub-Section-->
+          <h4 class="text-left">Jane Greene</h4>
+          <div class="row">
+            <table class="small-12 columns">
+              <thead>
+                <tr>
+                  <th>First Name </th>
+                  <th>Middle Name </th>
+                  <th>Social Security Number </th>
+                  <th>Date of Birth        </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jane </td>
+                  <td>Green </td>
+                  <td>240-##-#### </td>
+                  <td>0  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--Small Divisor      -->
+          <hr class="divisor-section-small">
+          <!--Sub-Section-->
+          <h4>Elinore Green</h4>
+          <div class="row">
+            <table class="small-12 columns">
+              <thead>
+                <tr>
+                  <th>First Name </th>
+                  <th>Middle Name </th>
+                  <th>Social Security Number </th>
+                  <th>Date of Birth     </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Elinore </td>
+                  <td>Green </td>
+                  <td>240-##-#### </td>
+                  <td>0 </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--Small Divisor      -->
+          <hr class="divisor-section-small">
+          <!--Sub-Section-->
+          <h4>Addresses</h4>
+          <div class="row">
+            <table class="small-12 columns">
+              <thead>
+                <tr>
+                  <th>Street</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>ZIP</th>
+                  <th>Reported  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9999 Nc Highway 194 </td>
+                  <td>Boone </td>
+                  <td>NC</td>
+                  <td>28607</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>9999 Nc Highway 194 </td>
+                  <td>Fleetwood </td>
+                  <td>NC</td>
+                  <td>28607</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>999 Jefferson  </td>
+                  <td>Boone </td>
+                  <td>NC</td>
+                  <td>28607</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>999 Jefferson  </td>
+                  <td>Sugar Grove </td>
+                  <td>NC</td>
+                  <td>28607</td>
+                  <td>&nbsp;</td>
+                </tr>
+                <tr class="last-row">
+                  <td>9999 Nc Highway 194 </td>
+                  <td>Boone </td>
+                  <td>NC</td>
+                  <td>28607</td>
+                  <td>&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
-        <h3 class="report-heading-subitem">Jane Greene</h3>
-        <table class="small-12 columns">
-          <thead>
-            <tr>
-              <th>First Name </th>
-              <th>Middle Name </th>
-              <th>Social Security Number </th>
-              <th>Date of Birth </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Jane </td>
-              <td>Green </td>
-              <td>240-##-#### </td>
-              <td>0       </td>
-            </tr>
-          </tbody>
-        </table>
-        <hr>
-        <h3 class="report-heading-subitem">Elinore Green</h3>
-        <table class="small-12 columns">
-          <thead>
-            <tr>
-              <th>First Name </th>
-              <th>Middle Name </th>
-              <th>Social Security Number </th>
-              <th>Date of Birth </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Elinore </td>
-              <td>Green </td>
-              <td>240-##-#### </td>
-              <td>0 </td>
-            </tr>
-          </tbody>
-        </table>
-        <h4 class="report-heading-subitem">  Addresses</h4>
-        <table class="small-12 columns">
-          <thead>
-            <tr>
-              <th>Street</th>
-              <th>City</th>
-              <th>State</th>
-              <th>ZIP</th>
-              <th>Reported</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>9999 Nc Highway 194 </td>
-              <td>Boone </td>
-              <td>NC</td>
-              <td>28607</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>9999 Nc Highway 194 </td>
-              <td>Fleetwood </td>
-              <td>NC</td>
-              <td>28607</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>999 Jefferson  </td>
-              <td>Boone </td>
-              <td>NC</td>
-              <td>28607</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>999 Jefferson  </td>
-              <td>Sugar Grove </td>
-              <td>NC</td>
-              <td>28607</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr class="last-row">
-              <td>9999 Nc Highway 194 </td>
-              <td>Boone </td>
-              <td>NC</td>
-              <td>28607</td>
-              <td>&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
       </section>
       <!--Footer-->
       <footer class="second-nav">
@@ -203,7 +225,7 @@
     <!--Modals-->
     <div id="loginModal" data-reveal class="tiny reveal-modal">
       <h4 class="text-center">Members Area</h4>
-      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
       <form action="order-step-1.html" class="small-10 small-centered columns">
         <div class="row">
           <label>Email
@@ -229,7 +251,7 @@
         <div class="row">
           <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
         </div>
-        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
       </form>
     </div>
   </body>
@@ -261,4 +283,5 @@
   <!-- build:js js/app.min.js-->
   <script src="js/app.js"></script>
   <!-- endbuild-->
+  <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 </html>

@@ -1,0 +1,161 @@
+extends includes/layout-template
+
+block content
+  ul.breadcrumbs
+    li: a(href="members-orders.html") All Reports
+    li.current: a(href="#") Report 12345
+
+  .btn-print-report
+    a.button.radius(href="javascript:window.print()") Print this Report
+    small.text-italic.text-center Printer-friendly version
+  
+  //Report Header  
+  section.report-order-information
+    h1.text-center Report 12345
+    ul.small-block-grid-3.report-parameters-list.small-8.columns.small-centered
+      li
+        span.parameters-title First name
+        | &nbsp;Thomas     
+      li
+        span.parameters-title SSN
+        | &nbsp;222-##-####
+      li
+        span.parameters-title Date
+        | &nbsp;09 / 20 / 2010      
+       li
+        span.parameters-title Last name
+        | &nbsp;Green      
+      li
+        span.parameters-title Records
+        | &nbsp;1200
+      li
+        span.parameters-title Time
+        | &nbsp;11:08:17 AM 
+  
+  //Report Section
+  section
+    section.report-section-title
+      h2 Social Security Number Information    
+      p.text-italic Social Security Number 222-##-####
+    .row
+      table.small-12.columns
+        thead.table-header
+          tr
+            th Social Security Number 
+            th Date of Birth 
+            th Deceased 
+            th Issued 
+          
+        
+        tbody.table-content
+          tr
+            td 246-##-### 
+            td ## / ## / 1943 
+            td No 
+            td NC (1957-1958) 
+          
+          tr.last-row
+            td 246-##-### 
+            td ## / ## / 1943 
+            td No 
+            td NC (1957-1958) 
+      
+  hr.divisor-section-big
+  
+  //Report Section
+  section
+    //Section Title
+    section.report-section-title
+      h2 Possible Relatives
+      p.text-italic Social Security Number 222-##-####
+      
+    //Sub-Section
+    h4.text-left Jane Greene
+    .row
+      table.small-12.columns
+        thead
+          tr
+            th First Name 
+            th Middle Name 
+            th Social Security Number 
+            th Date of Birth        
+        tbody
+          tr
+            td Jane 
+            td Green 
+            td 240-##-#### 
+            td 0  
+
+    //Small Divisor      
+    hr.divisor-section-small
+
+    //Sub-Section
+    h4 Elinore Green
+    .row
+      table.small-12.columns
+        thead
+          tr
+            th First Name 
+            th Middle Name 
+            th Social Security Number 
+            th Date of Birth     
+        tbody
+          tr
+            td Elinore 
+            td Green 
+            td 240-##-#### 
+            td 0 
+
+    //Small Divisor      
+    hr.divisor-section-small
+    
+    //Sub-Section
+    h4 Addresses
+    .row
+      table.small-12.columns
+        thead
+          tr
+            th Street
+            th City
+            th State
+            th ZIP
+            th Reported  
+        tbody
+          tr
+            td 9999 Nc Highway 194 
+            td Boone 
+            td NC
+            td 28607
+            td &nbsp;
+          
+          tr
+            td 9999 Nc Highway 194 
+            td Fleetwood 
+            td NC
+            td 28607
+            td &nbsp;
+          
+          tr
+            td 999 Jefferson  
+            td Boone 
+            td NC
+            td 28607
+            td &nbsp;
+          
+          tr
+            td 999 Jefferson  
+            td Sugar Grove 
+            td NC
+            td 28607
+            td &nbsp;
+          
+          tr.last-row
+            td 9999 Nc Highway 194 
+            td Boone 
+            td NC
+            td 28607
+            td &nbsp;
+        
+
+block append-to-scripts    
+  link(rel="stylesheet", href="css/print.css", type="text/css", media="print")

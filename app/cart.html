@@ -47,15 +47,39 @@
         </div>
       </nav>
       <!--Content-->
-      <section class="row content">
+      <section class="row container content">
         <h3>Cart</h3>
-        <table class="small-12 columns cart-empty">
+        <table class="cart small-12 columns flat-bottom">
+          <thead>
+            <tr>
+              <th>Search Details</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Edit/Action</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
-              <td class="text-center">You have no items in your shopping cart. Return to our <a href="pricing_v2.html">Products Page</a> in order to continue.</td>
+              <td class="text-left">
+                <p>Alaska Criminal Record Search</p>
+                <ul class="small-block-grid-2">
+                  <li><span class="parameters-title">First Name</span><br>Thomas</li>
+                  <li>   <span class="parameters-title">Last Name</span><br>Green</li>
+                  <li><span class="parameters-title">State</span><br>AK</li>
+                  <li><span class="parameters-title">Date of Birth</span><br>03/12/19 79</li>
+                </ul>
+              </td>
+              <td>$18.95</td>
+              <td>1</td>
+              <td>$18.95</td>
+              <td><a href="#" name="Order-number" class="btn-remove"><i class="fa fa-times-circle"></i>Remove</a></td>
             </tr>
           </tbody>
         </table>
+        <div class="cart-expansion small-12 columns">
+          <div class="small-6 columns small-centered"><a class="button green radius expand">Add an additional person to your search</a></div>
+        </div>
       </section>
       <!--Footer-->
       <footer class="second-nav">
@@ -74,7 +98,7 @@
     <!--Modals-->
     <div id="loginModal" data-reveal class="tiny reveal-modal">
       <h4 class="text-center">Members Area</h4>
-      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
       <form action="order-step-1.html" class="small-10 small-centered columns">
         <div class="row">
           <label>Email
@@ -100,7 +124,7 @@
         <div class="row">
           <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
         </div>
-        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
       </form>
     </div>
   </body>

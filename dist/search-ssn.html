@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Head-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation project</title>
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/vendor/modernizr.min.js"></script>
+    <!--[if lt IE 9]-->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <!-- Header-->
+      <header class="row container">
+        <div class="text-center small-8 small-offset-2 columns v-middle"><a href="#" name="CrimView - Online Background Check" class="logo"></a></div>
+        <div class="small-2 columns text-right v-middle">
+          <div class="row"><a href="#" data-reveal-id="loginModal" class="button round outline small no-margin btn-login">Client Login</a></div>
+        </div>
+      </header>
+      <!-- Main Navigation-->
+      <nav class="main-nav">
+        <div class="row container">
+          <div class="small-7 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="index.html" title="Home" class="selected">Home</a>
+              </li>
+              <li><a href="database-coverage.html" title="Database Coverage">Database Coverage</a>
+              </li>
+              <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+              </li>
+              <li><a href="contact.html" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Content-->
+      <section class="row container content">
+        <!-- Search Form-->
+        <section class="small-6 columns">
+          <!--Heading-->
+          <h1 class="search-form-title text-center">Search by:<br><span class="normal-weight">Name and Social Security Number</span></h1>
+          <!--Form-->
+          <div class="panel">
+            <form method="post" action="#" data-abide class="form-search">
+              <!-- Form : First Name              -->
+              <div>
+                <input type="text" placeholder="First Name" name="first-name" required pattern="alpha"><small class="error text-center">This name isn't valid.<br>Please, try again.</small>
+              </div>
+              <!-- Form : Last Name              -->
+              <div>
+                <input type="text" placeholder="Last Name" name="last-name" required pattern="alpha"><small class="error text-center">This name isn't valid.<br>Please, try again.</small>
+              </div>
+              <!-- Form : SSN-->
+              <div>
+                <input type="text" placeholder="Social Security Number" name="ssn" required pattern="number"><small class="error">This SSN isn't valid. Please, try again. No Spaces allowed.</small>
+              </div>
+              <!-- Form : Button  -->
+              <input type="submit" value="Start Search" class="button radius small expand form-search-btn">
+            </form>
+          </div>
+        </section>
+        <!-- Security Text-->
+        <section class="small-5 small-offset-1 columns panel security-info">
+          <h2 class="security-info-title">Our background check includes:</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br></p>
+          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. Laboris nisi ut aliquip ex ea commodo consequat minim veniam, quis nostrud enim.<br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><img alt="" src="images/bg-lock-icon.png" class="security-info-bg">
+        </section>
+      </section>
+      <!--Footer-->
+      <footer class="second-nav">
+        <div class="row container">
+          <nav class="small-6 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="#">Database Coverage</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <!--Modals-->
+    <div id="loginModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">Members Area</h4>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <form action="order-step-1.html" class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text">
+          </label>
+          <label>Password
+            <input type="password">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Log In" class="button dark-blue radius expand">
+        </div>
+      </form>
+    </div>
+    <div id="passwordRecoverModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">We'll send you<br> a new password</h4><a class="close-reveal-modal">&#215;</a>
+      <form class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text" placeholder="Type the e-mail you have registered">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
+        </div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
+      </form>
+    </div>
+  </body>
+  <script src="js/vendor/libraries.min.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script src="js/app.min.js"></script>
+</html>

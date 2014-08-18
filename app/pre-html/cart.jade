@@ -1,0 +1,44 @@
+extends includes/layout-template
+
+block content
+  h3 Cart
+  table.cart.small-12.columns.flat-bottom
+    thead
+      tr
+        th Search Details
+        th Unit Price
+        th Quantity
+        th Price
+        th Edit/Action
+    tbody
+      tr
+        td.text-left
+          p Alaska Criminal Record Search
+          ul.small-block-grid-2
+            li
+              span.parameters-title First Name
+              br
+              | Thomas
+            li    
+              span.parameters-title Last Name
+              br
+              | Green
+            li
+              span.parameters-title State
+              br
+              | AK
+            li
+              span.parameters-title Date of Birth
+              br
+              | 03/12/19 79
+
+        td $18.95
+        td 1
+        td $18.95
+        td: a(href="#", name="Order-number", class="btn-remove")
+                i.fa.fa-times-circle
+                | Remove
+
+  .cart-expansion.small-12.columns
+    .small-6.columns.small-centered
+      a.button.green.radius.expand Add an additional person to your search

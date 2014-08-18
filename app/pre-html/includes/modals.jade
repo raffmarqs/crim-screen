@@ -1,0 +1,28 @@
+div(id="loginModal", class="tiny reveal-modal", data-reveal)
+  h4.text-center Members Area
+  p.small-10.columns.small-centered.reveal-modal-subtitle Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a>
+                 
+  a.close-reveal-modal &#215;
+  form(class="small-10 small-centered columns", action="order-step-1.html")
+    div.row
+      label Email
+            input(type="text")
+      label Password
+            input(type="password")
+    //- div.row
+    //-   a(data-reveal-id="passwordRecoverModal", class="right") Forgot my Password
+    div.row
+      input(type="submit", class="button dark-blue radius expand", value="Log In")
+
+
+div(id="passwordRecoverModal", class="tiny reveal-modal", data-reveal) 
+  h4.text-center We'll send you<br> a new password
+  a.close-reveal-modal &#215;
+  form.small-10.small-centered.columns
+    div.row
+      label Email
+            input(type="text",placeholder="Type the e-mail you have registered")
+    div.row
+      input(type="submit", class="button dark-blue radius expand no-margin", value="Recover Password")
+    div.row.text-center.reveal-modal-back
+      a.link-modal(data-reveal-id="loginModal") Back

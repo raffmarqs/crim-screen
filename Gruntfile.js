@@ -35,8 +35,8 @@ module.exports = function(grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: '<%= app %>/',
-					src: ['**/*.jade','!**/head.jade', '!**/header.jade', '!**/main-navigation.jade', '!**/second-navigation.jade','!**/modals.jade', '!**/scripts.jade'],
+					cwd: '<%= app %>/pre-html',
+					src: ['**/*.jade','!includes/*.jade'],
 					ext: '.html',
 					dest: '<%= app %>/'
 				}]
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd:'<%= app %>/',
-					src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**'],
+					src: ['fonts/**', '**/*.html', '!**/*.scss', '!bower_components/**', '!pre-html/**'],
 					dest: '<%= dist %>/'
 				} , {
 					expand: true,

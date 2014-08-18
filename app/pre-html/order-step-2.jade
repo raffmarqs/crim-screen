@@ -1,0 +1,60 @@
+extends includes/layout-template
+
+block content
+  section.specialOfferCheck
+    h1.section-offer-title
+      | Special Offer&nbsp;-&nbsp;
+      span.section-offer-title-highlight Limited Time Only
+      br
+      span.section-offer-subtitle
+        | Instantly
+        span.section-offer-subtitle-highlight &nbsp;save 50%&nbsp;
+        | on the following searches
+    
+    form(action='')
+      ul.no-bullet.offer-check-list
+        li.small-12.columns
+          .row
+            .small-10.columns
+              .left.offer-check
+                input(type='checkbox', name='national-wants', id="national-wants-check")
+              .left
+                label.offer-check-title(for='national-wants-check')
+                  | National Wants and Warrants Check &nbsp;
+                  span.offer-check-old-price $ 9.95
+                  span.offer-check-new-price &nbsp;&nbsp;only $4.95
+                p Searches for previous and current warrants.
+            .small-2.columns
+              a.button.grey.small.radius.expand(href='#') See a sample
+
+        li.small-12.columns
+          .row
+            .small-10.columns
+              .left.offer-check
+                input(type='checkbox', name='national-wants', id="national-arrest-check")
+              .left
+                label.offer-check-title(for='national-arrest-check')
+                  | National Arrest History Check &nbsp;
+                  span.offer-check-old-price $ 9.95
+                  span.offer-check-new-price &nbsp;&nbsp;only $4.95
+                p They may have been arrested but never convicted. This search will tell you if they were.
+            .small-2.columns
+              a.button.grey.small.radius.expand(href='#') See a sample
+
+        li.small-12.columns
+          .row
+            .small-10.columns
+              .left.offer-check
+                input(type='checkbox', name='national-wants', id="national-federal-check")
+              .left
+                label.offer-check-title(for='national-federal-check')
+                  | National Federal Docket Scan &nbsp;
+                  span.offer-check-old-price $ 9.95
+                  span.offer-check-new-price &nbsp;&nbsp;only $4.95
+                p Scans ALL U.S Federal District Courts for name matches on Federal Criminal Records, Bankruptcies and Civil Records.
+            .small-2.columns
+              a.button.grey.small.radius.expand(href='#') See a sample
+      div.small-3.columns.small-centered
+        input.button.radius.expand(type='submit', value='Proceed to checkout', name='checkout-step2')
+
+block append-to-scripts

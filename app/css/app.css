@@ -3333,9 +3333,9 @@ dialog, .reveal-modal {
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #00a8de;
   padding: 1.25rem;
-  border: solid 1px #666;
+  border: solid 1px #64deff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 40em) {
     dialog, .reveal-modal {
@@ -3362,7 +3362,7 @@ dialog, .reveal-modal {
     position: absolute;
     top: 0.5rem;
     right: 0.6875rem;
-    color: #aaa;
+    color: #fff;
     font-weight: 700;
     cursor: pointer; }
 
@@ -5185,9 +5185,11 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 /* all app scss styles here */
+/* Documentation for the html/css structure - http://foundation.zurb.com/docs/ */
 /*----------------
   Base Styles
 --------------- */
+/* -- Base -- */
 body {
   background: #333 url('../images/bg-noise.png') repeat; }
 
@@ -5200,7 +5202,8 @@ body {
   margin-top: 40px; }
 
 .container {
-  width: 1024px; }
+  width: 1024px;
+  position: relative; }
 
 .row {
   max-width: 1024px; }
@@ -5211,6 +5214,14 @@ a.button {
 /* -- Small Fixes -- */
 .inline-list > li:first-child {
   margin-left: 0; }
+
+/* -- Headings -- */
+.subheading {
+  font-size: 60%;
+  position: relative;
+  top: -15px;
+  font-style: italic;
+  margin-bottom: 40px; }
 
 /* -- Utility Classes -- */
 .v-middle {
@@ -5235,6 +5246,9 @@ a.button {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important; }
 
+.green-highlight {
+  color: #72bf44; }
+
 /* -- Template Elements: Header & Footer -- */
 header {
   padding: 20px 0 !important; }
@@ -5249,8 +5263,8 @@ footer {
 .logo {
   background-image: url('../images/logo-white.png');
   display: block;
-  width: 230px;
-  height: 67px;
+  width: 270px;
+  height: 73px;
   margin: 0 auto; }
 
 .btn-login {
@@ -5268,6 +5282,7 @@ footer {
     text-decoration: none; }
 
 /* -- Menus -- */
+/* Main Nav */
 .main-nav {
   background-color: #00a8de;
   color: #333;
@@ -5284,6 +5299,7 @@ footer {
       color: #fff;
       text-decoration: none; }
 
+/* Footer Navigation */
 .second-nav {
   width: 100%;
   background-color: #282828;
@@ -5302,6 +5318,36 @@ footer {
     .second-nav a:hover {
       color: #00a8de;
       text-decoration: none; }
+
+/* Members Menu */
+.members-header {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.25rem 0; }
+
+.members-nav {
+  padding-top: 5px;
+  margin: 0; }
+  .members-nav .selected a {
+    color: #64deff !important;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #64deff; }
+  .members-nav a {
+    color: #fff; }
+    .members-nav a:hover {
+      color: #64deff;
+      text-decoration: none; }
+
+.menu-members-btn-new-search {
+  border-right: 1px solid #fff;
+  padding-right: 20px; }
+
+.menu-members-search-order {
+  padding-left: 20px; }
+
+.menu-members-search-order-field {
+  padding-right: 0; }
+  .menu-members-search-order-field input {
+    margin-bottom: 0; }
 
 /* -- Buttons -- */
 .button {
@@ -5349,9 +5395,57 @@ input, select {
   border: none;
   padding: 0 0 1px 10px; }
 
+/* -- Table & Cart -- */
+table {
+  border-collapse: separate;
+  border-radius: 20px;
+  padding: 0 !important; }
+  table th, table td {
+    text-align: center !important;
+    padding: 10px 20px; }
+  table td {
+    border-right: 1px solid #00a8de; }
+    table td:last-child {
+      border-right: none; }
+  table thead th {
+    background: #00a8de; }
+    table thead th:first-child {
+      border-radius: 20px 0 0 0; }
+    table thead th:last-child {
+      border-radius: 0 20px 0 0; }
+  table .cart-expand {
+    width: 100%; }
+
+.cart.flat-bottom {
+  margin-bottom: 0; }
+
+.cart-expansion {
+  margin-top: 0;
+  background-color: #00a8de;
+  border-radius: 0 0 20px 20px; }
+  .cart-expansion .button {
+    margin: 10px 0; }
+
+.cart-empty {
+  padding: 30px 0 !important; }
+
+.cart-parameters-list li {
+  padding-bottom: 0 !important;
+  line-height: 1.8rem; }
+.cart-parameters-list .parameters-title {
+  text-align: right;
+  font-weight: 700;
+  padding-right: 0; }
+
 /* -- General -- */
 .panel {
   border-radius: 20px; }
+
+.breadcrumbs {
+  background: none;
+  border: none; }
+  .breadcrumbs .current a {
+    color: #64deff; }
 
 /*-------
   Index
@@ -5375,7 +5469,7 @@ input, select {
 
 .heading-pitch {
   font-size: 1.6em;
-  margin: 20px 0 60px 0; }
+  margin: -20px 0 60px 0; }
 
 .included-checks-title {
   border-bottom: 2px solid #00a8de;
@@ -5423,9 +5517,9 @@ input, select {
   margin: 0 !important;
   padding-left: 0; }
 
-/*-------------
+/*--------------
   Search By...
-  -------------*/
+--------------*/
 /* -- Security Info Panel -- */
 .security-info {
   border: 2px solid #00a8de;
@@ -5461,8 +5555,9 @@ input, select {
   margin: 15px 0 0 0; }
 
 /*--------------
-  Order-Step-1
+  Order-Steps
 --------------*/
+/* -- Order Step 1 --*/
 .search-parameters-heading {
   font-weight: 700;
   font-size: 2rem; }
@@ -5486,13 +5581,10 @@ input, select {
 
 .stateChoice {
   width: 400px;
-  margin: 0px auto;
-  padding-top: 10px;
+  margin: 55px auto;
+  padding-top: 35px;
   position: relative;
   text-align: center; }
-
-.reveal-modal {
-  background-color: #222; }
 
 .usa-map {
   position: absolute;
@@ -5501,21 +5593,7 @@ input, select {
   z-index: -1;
   max-width: none; }
 
-.coverage-modal-title {
-  text-align: center;
-  margin-bottom: 30px; }
-
-.coverage-modal-list dt {
-  margin-bottom: 0; }
-
-.coverage-modal-list li {
-  margin-bottom: 30px; }
-
-.close-x {
-  top: 2rem !important;
-  right: 1.5rem !important; }
-
-/* -- STEP 2 -- */
+/* -- Order Step 2 -- */
 .section-offer-title {
   text-align: center;
   font-size: 2rem;
@@ -5557,44 +5635,9 @@ input, select {
     margin-bottom: 0;
     width: 700px; }
 
-table {
-  border-collapse: separate;
-  border-radius: 20px;
-  padding: 0 !important; }
-  table th, table td {
-    text-align: center !important;
-    padding: 10px 20px; }
-  table td {
-    border-right: 1px solid #00a8de; }
-    table td:last-child {
-      border-right: none; }
-  table thead th {
-    background: #00a8de; }
-    table thead th:first-child {
-      border-radius: 20px 0 0 0; }
-    table thead th:last-child {
-      border-radius: 0 20px 0 0; }
-  table .cart-expand {
-    width: 100%; }
-
-.cart.flat-bottom {
-  margin-bottom: 0; }
-
-.cart-expansion {
-  margin-top: 0;
-  background-color: #00a8de;
-  border-radius: 0 0 20px 20px; }
-  .cart-expansion .button {
-    margin: 20px 0; }
-
+/* -- Order Step 3 -- */
 .billing-info, .credit-card-info {
-  margin: 60px 0 30px 0 !important; }
-
-/*--------------------
-  Order page
-----------------------*/
-.billing-info, .credit-card-info {
-  margin-bottom: 20px !important; }
+  margin: 60px 0 20px 0 !important; }
   .billing-info h3, .credit-card-info h3 {
     margin: 10px 0 20px 0; }
 
@@ -5627,74 +5670,24 @@ table {
     .terms-conditions .terms-conditions-content * {
       font-size: 0.75rem; }
 
-#pp-btn {
-  display: none; }
-
-#office-gallery {
-  margin: 20px auto 20px auto; }
-
 .credit-cards input {
   margin-right: 15px; }
 
+#pp-btn {
+  display: none; }
+
+/*----------------
+  Policy Privacy
+----------------*/
 .policy-title {
   margin: 60px auto 15px auto; }
 
-.report-parameters-list li {
-  padding: 0; }
-
-.members-header {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 1.25rem 0; }
-
-.members-nav {
-  padding-top: 5px;
-  margin: 0; }
-  .members-nav .selected a {
-    color: #64deff !important;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #64deff; }
-  .members-nav a {
-    color: #fff; }
-    .members-nav a:hover {
-      color: #64deff;
-      text-decoration: none; }
-
-.menu-members-btn-new-search {
-  border-right: 1px solid #fff;
-  padding-right: 20px; }
-
-.menu-members-search-order {
-  padding-left: 20px; }
-
-.menu-members-search-order-field {
-  padding-right: 0; }
-  .menu-members-search-order-field input {
-    margin-bottom: 0; }
-
-.btn-open-report {
-  margin: 5px 0 !important; }
-  .btn-open-report .fa {
-    margin-right: 5px; }
-
-.subheading {
-  font-size: 60%;
-  position: relative;
-  top: -15px;
-  font-style: italic;
-  margin-bottom: 40px; }
-
-.order-list {
-  margin-top: 30px; }
-
-.members-profile-fields {
-  margin: 30px 0 20px 0; }
-
-.cart-empty {
-  padding: 30px 0 !important; }
-
+/*------------------
+  Products/Pricing
+------------------*/
 .products-pricingTable {
   padding: 0 120px;
-  margin-bottom: 60px;
+  margin: 35px auto;
   text-align: center; }
 
 .products-pricingTable .small-block-grid-3 li {
@@ -5753,50 +5746,81 @@ table {
   color: #397585;
   font-weight: 700; }
 
-.products-features {
-  padding: 10px;
-  margin-left: 0 !important;
-  list-style: none; }
+/*---------
+  Contact
+---------*/
+#office-gallery {
+  margin: 20px auto 20px auto; }
 
-.products-features li {
-  margin-bottom: 10px; }
+/*--------
+  Modals
+--------*/
+.close-reveal-modal {
+  border-bottom: 0; }
 
-.products-securityHeadline {
-  font-size: 1.8em;
-  font-weight: 400;
-  text-align: center;
-  margin: 60px 0; }
+.link-modal {
+  color: #006685; }
+  .link-modal:hover {
+    color: #004459;
+    text-decoration: underline; }
 
-.products-securityHeadline span {
-  color: #72bf44; }
+/*--------------
+  Members Area
+--------------*/
+.report-parameters-list li {
+  padding: 0; }
 
-.green-highlight {
-  color: #72bf44; }
+.btn-open-report {
+  margin: 5px 0 !important; }
+  .btn-open-report .fa {
+    margin-right: 5px; }
 
-.faqYes {
-  background: url('../images/bg-yes.png') no-repeat center center;
-  margin: 60px auto !important; }
-  .faqYes .small-6 {
-    padding: 0; }
-  .faqYes ul {
-    list-style: none; }
-    .faqYes ul li {
-      margin-bottom: 10px; }
+.order-list {
+  margin-top: 30px; }
 
-.faqBox {
-  border-radius: 20px;
-  background-color: #282828;
-  padding: 30px;
-  margin: 90px auto 20px auto; }
-  .faqBox dl {
-    font-size: 0.85rem !important; }
+.members-profile-fields {
+  margin: 30px 0 20px 0; }
 
-.faqBox-safeData {
-  font-size: 0.9em;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); }
-  .faqBox-safeData img {
-    width: 61px;
-    margin-right: 15px; }
-  .faqBox-safeData div {
-    width: 720px; }
+.list-fees-horizontal {
+  margin-bottom: 20px; }
+
+/*--------------
+  Report Style
+--------------*/
+.admin-login-box {
+  margin-bottom: 40px; }
+
+.btn-print-report {
+  position: absolute;
+  right: 0;
+  top: 0; }
+  .btn-print-report a, .btn-print-report small {
+    display: block;
+    margin-bottom: 5px; }
+
+.report-order-information {
+  margin-bottom: 60px; }
+
+.report-section-title {
+  margin-bottom: 30px;
+  text-align: center; }
+
+.divisor-section-big {
+  background-color: #00a8de;
+  border: none;
+  height: 1px;
+  margin: 25px auto 40px auto;
+  width: 150px; }
+
+.divisor-section-small {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  height: 1px;
+  margin: 20px auto;
+  width: 80px; }
+
+/*------------
+  Admin Area
+------------*/
+.admin-login-box {
+  margin-bottom: 40px; }

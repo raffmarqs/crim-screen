@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- Head-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation project</title>
+    <link rel="stylesheet" href="css/libraries.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+    <script src="js/vendor/modernizr.min.js"></script>
+    <!--[if lt IE 9]-->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <!-- Header-->
+      <header class="row container">
+        <div class="text-center small-8 small-offset-2 columns v-middle"><a href="#" name="CrimView - Online Background Check" class="logo"></a></div>
+        <div class="small-2 columns text-right v-middle">
+          <div class="row"><a href="#" data-reveal-id="loginModal" class="button round outline small no-margin btn-login">Client Login</a></div>
+        </div>
+      </header>
+      <!-- Main Navigation-->
+      <nav class="main-nav">
+        <div class="row container">
+          <div class="small-7 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="index.html" title="Home" class="selected">Home</a>
+              </li>
+              <li><a href="database-coverage.html" title="Database Coverage">Database Coverage</a>
+              </li>
+              <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a>
+              </li>
+              <li><a href="contact.html" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Content-->
+      <section class="row container content">
+        <!-- Page Title-->
+        <h1 class="text-center">Complete order</h1>
+        <!-- Table Cart-->
+        <div class="row">
+          <table class="cart small-12 columns flat-bottom">
+            <thead>
+              <tr>
+                <th>Search Details</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Edit/Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-left">
+                  <ul class="small-block-grid-2 cart-parameters-list">
+                    <li class="parameters-title">First Name</li>
+                    <li>Thomas                </li>
+                    <li class="parameters-title">Last Name</li>
+                    <li>Green</li>
+                    <li class="parameters-title">State</li>
+                    <li>NC</li>
+                    <li class="parameters-title">Date of Birth</li>
+                    <li>22/08/1987</li>
+                  </ul>
+                </td>
+                <td>$18.95</td>
+                <td>1</td>
+                <td>$18.95</td>
+                <td><a href="#" name="Order-number" class="btn-remove"><i class="fa fa-times-circle"></i>Remove</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="cart-expansion small-12 columns">
+            <div class="small-3 columns small-offset-9"><a class="button grey radius expand tiny">Continue Shopping</a></div>
+          </div>
+        </div>
+        <!-- Order Information -->
+        <div class="row order-information small-6 columns small-centered">
+          <form action="" data-abide>
+            <!-- Billing Information-->
+            <div class="row billing-info">
+              <div class="row">
+                <h3 class="small-12 columns">Billing Information</h3>
+              </div>
+              <div class="row">
+                <!--Left Column-->
+                <div class="small-6 columns">
+                  <div>
+                    <label>First Name
+                      <input type="text" name="personal-info-first-name" tabindex="1" required pattern="alpha">
+                    </label><small class="error">This Name isn't valid. Please, try again.</small>
+                  </div>
+                  <div>
+                    <label>Email
+                      <input type="email" id="email-field" name="personal-info-email" tabindex="3" required pattern="email">
+                    </label><small class="error">This Email isn't valid. Please, try again.</small>
+                  </div>
+                  <div>
+                    <label>Billing Address 1
+                      <input type="text" name="personal-info-address-1" tabindex="5" required>
+                    </label><small class="error">This Address isn't valid. Please, try again.</small>
+                  </div>
+                  <div>
+                    <label>City
+                      <input type="text" name="personal-info-city" tabindex="7" required pattern="[a-z A-Z]+">
+                    </label><small class="error">This City isn't valid. Please, try again.</small>
+                  </div>
+                  <div>
+                    <label>Zip Code
+                      <input type="text" name="personal-info-zip" tabindex="9" required>
+                    </label><small class="error">This Zip Code isn't valid. Please, try again.</small>
+                  </div>
+                </div>
+                <!--Right Column-->
+                <div class="small-6 columns">
+                  <div>
+                    <label>Last Name
+                      <input type="text" name="personal-info-last-name" tabindex="2" required pattern="alpha">
+                    </label><small class="error">This Name isn't valid. Please, try again.</small>
+                  </div>
+                  <div>
+                    <label>Email&nbsp;(Confirm)
+                      <input type="email" name="personal-info-email" tabindex="4" required data-equalto="email-field">
+                    </label><small class="error">Please, type the exact same email you entered before.</small>
+                  </div>
+                  <div>
+                    <label>Billing Address 2
+                      <input type="text" name="personal-info-address-2" tabindex="6">
+                    </label>
+                  </div>
+                  <div>
+                    <label>State
+                      <select name="personal-info-state" tabindex="8" required>
+                        <option value="" disabled selected>Please Select</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="DC">District Of Columbia</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming  </option>
+                      </select>
+                    </label><small class="error">Please, select a State.                  </small>
+                  </div>
+                  <div>
+                    <label>Phone Number
+                      <input type="text" name="personal-info-phone" tabindex="10" required pattern="number">
+                    </label><small class="error">Phone number isn't valid. Don't use spaces, dashes or parenthesis.  </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Credit Card Information -->
+            <div class="row credit-card-info">       
+              <div class="row">
+                <h3 class="small-12 columns">Credit Card Information          </h3>
+              </div>
+              <div class="row">
+                <form action="" class="small-12 columns">
+                  <!-- Payment Method -->
+                  <div class="payment-method">
+                    <!-- In-house Credit Card -->
+                    <ul class="small-block-grid-5">
+                      <li>
+                        <label for="mastercard" class="credit-cards">
+                          <input type="radio" name="payment-method" id="mastercard-payment" value="mastercard" tabindex="11"><img src="images/icon-mastercard.png" alt="">
+                        </label>
+                      </li>
+                      <li>
+                        <label for="visa" class="credit-cards">
+                          <input type="radio" name="payment-method" id="visa-payment" value="visa" tabindex="12"><img src="images/icon-visa.png" alt="">
+                        </label>
+                      </li>
+                      <li>
+                        <label for="amex" class="credit-cards">
+                          <input type="radio" name="payment-method" id="amex-payment" value="amex" tabindex="13"><img src="images/icon-amex.png" alt="">
+                        </label>
+                      </li>
+                      <li>
+                        <label for="discover" class="credit-cards">
+                          <input type="radio" name="payment-method" id="discover-payment" value="discover" tabindex="14"><img src="images/icon-discover.png" alt="">
+                        </label>
+                      </li>
+                      <!-- PayPal Payment -->
+                      <li>
+                        <label for="paypal" class="credit-cards">
+                          <input type="radio" name="payment-method" id="paypal-payment" value="paypal" tabindex="15"><img src="images/icon-paypal.png" alt="">
+                        </label>
+                      </li>
+                    </ul><small class="error">Testing an error</small>
+                    <!-- Credit Card Form -->
+                    <div id="cc-form" class="row">
+                      <!--Left Column-->
+                      <div class="small-6 columns">
+                        <div>
+                          <label>First name on card
+                            <input type="text" name="" placeholder="ex: JOHN" tabindex="16" required pattern="alpha">
+                          </label><small class="error">Name isn't valid. Please, try again.</small>
+                        </div>
+                        <div>
+                          <label>Credit Card Number
+                            <input type="text" name="" placeholder="Only Numbers - Without Space" tabindex="18" required pattern="card">
+                          </label><small class="error">Number isn't valid. Please, type only numbers without spaces.</small>
+                        </div>
+                        <div>
+                          <label>Expiration Date (Month)
+                            <select name="" id="" tabindex="20" required>
+                              <option value="" selected disabled>Please Select</option>
+                              <option value="01">(01) Jan</option>
+                              <option value="02">(02) Feb</option>
+                              <option value="03">(03) Mar</option>
+                              <option value="04">(04) Apr</option>
+                              <option value="05">(05) May</option>
+                              <option value="06">(06) Jun</option>
+                              <option value="07">(07) Jul</option>
+                              <option value="08">(08) Aug</option>
+                              <option value="09">(09) Sep</option>
+                              <option value="10">(10) Oct</option>
+                              <option value="11">(11) Nov</option>
+                              <option value="12">(12) Dec</option>
+                            </select>
+                          </label><small class="error">Please, select an Expiration Date.</small>
+                        </div>
+                      </div>
+                      <!--Right Column-->
+                      <div class="small-6 columns"> 
+                        <div>              
+                          <label>Last Name on card
+                            <input type="text" name="" placeholder="ex: SMITH" tabindex="17" required pattern="alpha">
+                          </label><small class="error">Name isn't valid. Please, try again.</small>
+                        </div>
+                        <div>
+                          <label>CVV&nbsp;(Security Code on Back of Card)
+                            <div class="row">
+                              <div class="small-10 columns">
+                                <div>
+                                  <input type="text" name="" tabindex="19" required pattern="cvv"><small class="error">Security Code isn't valid. Please, Try again.</small>
+                                </div>
+                              </div>
+                              <div class="small-2 columns"><img src="images/icon-credit.png" alt=""></div>
+                            </div>
+                          </label>
+                        </div>
+                        <div>
+                          <label>Expiration Date (Year)
+                            <select name="" id="" tabindex="21" required>
+                              <option value="" selected disabled>Please Select</option>
+                              <option value="2015">2015</option>
+                              <option value="2016">2016</option>
+                              <option value="2017">2017</option>
+                              <option value="2018">2018</option>
+                            </select>
+                          </label><small class="error">Please, select an Expiration Year.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- Agreement & Terms Information -->
+            <div class="row terms-conditions">      
+              <div class="small-12 columns">
+                <h4 class="terms-conditions-title">Agreement</h4>
+                <div class="terms-conditions-content">
+                  <label for="" tabindex="22"></label>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                    </ul>
+                  </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <!-- Agreement checkbox-->
+                <div class="row">
+                  <div class="small-12 columns">             
+                    <input type="checkbox" name="" id="terms-agreement-check" value="I agree with the Terms and Conditions and Coverage Policy" tabindex="23" required>
+                    <label for="terms-agreement-check">I have read and agree with the <a href="#">Terms and Conditions</a> and <a href="#">Coverage Policy</a></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Credit Card Information -->
+            <div id="cc-btn" class="row">
+              <div class="small-4 small-centered columns">
+                <input type="submit" value="Complete Order" tabindex="24" class="button radius expand">
+              </div>
+            </div>
+            <!-- Paypal Button -->
+            <div id="pp-btn" class="row">
+              <div class="small-8 small-centered columns">
+                <input type="submit" value="Complete Order using your Paypal Account" tabindex="24" class="button radius expand">
+              </div>
+              <!-- --- End: Order Information ---        -->
+            </div>
+          </form>
+        </div>
+      </section>
+      <!--Footer-->
+      <footer class="second-nav">
+        <div class="row container">
+          <nav class="small-6 columns small-centered">
+            <ul class="inline-list text-center">
+              <li><a href="#">Database Coverage</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <!--Modals-->
+    <div id="loginModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">Members Area</h4>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <form action="order-step-1.html" class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text">
+          </label>
+          <label>Password
+            <input type="password">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Log In" class="button dark-blue radius expand">
+        </div>
+      </form>
+    </div>
+    <div id="passwordRecoverModal" data-reveal class="tiny reveal-modal">
+      <h4 class="text-center">We'll send you<br> a new password</h4><a class="close-reveal-modal">&#215;</a>
+      <form class="small-10 small-centered columns">
+        <div class="row">
+          <label>Email
+            <input type="text" placeholder="Type the e-mail you have registered">
+          </label>
+        </div>
+        <div class="row">
+          <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
+        </div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
+      </form>
+    </div>
+  </body>
+  <script src="js/vendor/libraries.min.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script src="js/app.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      $( ".credit-cards").click(function() {
+        if ($('#paypal-payment').prop('checked') == true) {
+         $('#pp-btn').css("display","block");
+         $('#cc-btn').css("display","none");
+         $('#cc-form').css("display","none");
+        }
+        else{
+         $('#pp-btn').css("display","none");
+         $('#cc-btn').css("display","block");
+         $('#cc-form').css("display","block");
+        }
+      });      
+    });    
+  </script>
+</html>

@@ -1,0 +1,144 @@
+extends includes/layout-template
+
+block before-content
+  // Members Header & Menu
+  section.members-header
+    .row.container
+      nav.small-4.columns
+        ul.inline-list.text-center.members-nav
+          li: a My Orders          
+          li: a(href="members-profile.html") Edit Profile
+          li: a Accounting
+
+      .small-2.columns.small-offset-2.menu-members-btn-new-search
+        a.button.radius.tiny.no-margin.expand New Search
+      
+      .small-4.columns.menu-members-search-order
+        form(action="", data-abide)
+          .row
+            .small-6.columns.menu-members-search-order-field
+              input(type="text", name="search-order", placeholder="Order ID")             
+            .small-6.columns
+              input(type="submit", name="search-order-bt", value="Search Order", class="button radius tiny no-margin")  
+
+block content
+  .small-8.columns.small-centered
+    h1.text-center New Search    
+    form(action="#", id="new-search-parameters", data-abide)
+      
+      .row
+        div.small-6.columns
+          label 
+            |First Name
+            input(type="text", name="edit-first-name", required, pattern="alpha")
+          small.error Name isn't valid. Please, try again.
+        div.small-6.columns
+          label
+            | Last Name
+            input(type="text", name="edit-last-name", required, pattern="alpha")
+          small.error Name isn't valid. Please, try again.
+      div
+        label 
+          | State
+          select(name="personal-info-state", tabindex="8", required)
+            option(value="", disabled, selected) Please Select
+            option(value="AL") Alabama
+            option(value="AK") Alaska
+            option(value="AZ") Arizona
+            option(value="AR") Arkansas
+            option(value="CA") California
+            option(value="CO") Colorado
+            option(value="CT") Connecticut
+            option(value="DE") Delaware
+            option(value="DC") District Of Columbia
+            option(value="FL") Florida
+            option(value="GA") Georgia
+            option(value="HI") Hawaii
+            option(value="ID") Idaho
+            option(value="IL") Illinois
+            option(value="IN") Indiana
+            option(value="IA") Iowa
+            option(value="KS") Kansas
+            option(value="KY") Kentucky
+            option(value="LA") Louisiana
+            option(value="ME") Maine
+            option(value="MD") Maryland
+            option(value="MA") Massachusetts
+            option(value="MI") Michigan
+            option(value="MN") Minnesota
+            option(value="MS") Mississippi
+            option(value="MO") Missouri
+            option(value="MT") Montana
+            option(value="NE") Nebraska
+            option(value="NV") Nevada
+            option(value="NH") New Hampshire
+            option(value="NJ") New Jersey
+            option(value="NM") New Mexico
+            option(value="NY") New York
+            option(value="NC") North Carolina
+            option(value="ND") North Dakota
+            option(value="OH") Ohio
+            option(value="OK") Oklahoma
+            option(value="OR") Oregon
+            option(value="PA") Pennsylvania
+            option(value="RI") Rhode Island
+            option(value="SC") South Carolina
+            option(value="SD") South Dakota
+            option(value="TN") Tennessee
+            option(value="TX") Texas
+            option(value="UT") Utah
+            option(value="VT") Vermont
+            option(value="VA") Virginia
+            option(value="WA") Washington
+            option(value="WV") West Virginia
+            option(value="WI") Wisconsin
+            option(value="WY") Wyoming  
+        small.error Please, select a State.     
+      .row
+        .small-3.columns.small-offset-9
+          input.button.radius.small.expand(type="submit", name="submit-new-search-parameters", value="Continue")
+    
+
+    form(action="#", id="new-search-county-choice", data-abide)
+      h3 Choose a County to search
+      div      
+        select(name="county-select", required)
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+          option(value="county") County Name
+        small.error You need to choose a county to complete your search.
+      .small-9.columns.small-centered.text-center.list-fees-horizontal
+        .row
+          .small-3.columns
+            small County Fee
+            br
+            | $0.00
+          .small-1.columns.list-fees-math-signal
+            | +
+          .small-4.columns
+            small Convenience Fee
+            br
+            | $19.20
+          .small-1.columns.list-fees-math-signal
+            | =
+          .small-3.columns
+            small Total Fee
+            br
+            | $19.20
+      .small-6.columns.small-centered
+        input.button.radius.small.expand(type="submit", name="search-county-post", value="Add to Cart")
+    
+block append-to-scripts
+  script.
+    $(document).ready(function(){
+        $( "#new-search-parameters" ).submit(function( event ) {          
+          $('#new-search-county-choice').show();
+          $('html, body').animate({scrollTop: $("#new-search-county-choice").offset().top}, 1500);
+        });
+      });

@@ -922,7 +922,7 @@ $panel-font-color: #fff;
 // $reveal-overlay-bg-old: #000;
 
 // We use these to control the style of the modal itself.
-// $reveal-modal-bg: #fff;
+$reveal-modal-bg: $primary-color;
 // $reveal-position-top: rem-calc(100);
 // $reveal-default-width: 80%;
 // $reveal-modal-padding: rem-calc(20);
@@ -932,7 +932,7 @@ $panel-font-color: #fff;
 // $reveal-close-font-size: rem-calc(40);
 // $reveal-close-top: rem-calc(8);
 // $reveal-close-side: rem-calc(11);
-// $reveal-close-color: #aaa;
+$reveal-close-color: #fff;
 // $reveal-close-weight: $font-weight-bold;
 
 // We use this to set the default radius used throughout the core.
@@ -942,7 +942,7 @@ $panel-font-color: #fff;
 // We use these to control the modal border
 // $reveal-border-style: solid;
 // $reveal-border-width: 1px;
-// $reveal-border-color: #666;
+$reveal-border-color: $secondary-color;
 
 // $reveal-modal-class: "reveal-modal";
 // $close-reveal-modal-class: "close-reveal-modal";

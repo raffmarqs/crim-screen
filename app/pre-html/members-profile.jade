@@ -1,0 +1,54 @@
+extends includes/layout-template
+
+block before-content
+  // Members Header & Menu
+  section.members-header
+    .row.container
+      nav.small-4.columns
+        ul.inline-list.text-center.members-nav
+          li: a My Orders          
+          li.selected: a(href="members-profile.html") Edit Profile
+          li: a Accounting
+
+      .small-2.columns.small-offset-2.menu-members-btn-new-search
+        a.button.radius.tiny.no-margin.expand New Search
+      
+      .small-4.columns.menu-members-search-order
+        form(action="", data-abide)
+          .row
+            .small-6.columns.menu-members-search-order-field
+              input(type="text", name="search-order", placeholder="Order ID")             
+            .small-6.columns
+              input(type="submit", name="search-order-bt", value="Search Order", class="button radius tiny no-margin")  
+
+block content
+  .small-8.columns.small-centered
+    h3 Change your User Profile    
+    form(action="#", data-abide)
+      .members-profile-fields
+        div
+          label 
+            |First Name
+            input(type="text", name="edit-first-name", placeholder="Note For Dev: Change to Current First Name", pattern="alpha")
+          small.error Name isn't valid. Please, try again.
+        div
+          label
+            | Last Name
+            input(type="text", name="edit-last-name", placeholder="Note For Dev: Change to Current Last Name", pattern="alpha")
+          small.error Name isn't valid. Please, try again.
+        div
+          label
+            | Email 
+            input(type="email", name="edit-email", placeholder="Note For Dev: Change to Current email")
+            small.error E-mail isn't valid. Please, try again.
+        div
+          label
+            | Password 
+            input(type="password", name="edit-password", id="password", placeholder="Note For Dev: Change to Current Password")
+        div
+          label
+            | Password (Confirmation)
+            input(type="password", name="edit-password-confirm", data-equalto="password", placeholder="Note For Dev: Change to Current Password")
+          small.error The password did not match
+                  
+      input.button.radius.small(type="button", name="", value="Save changes")

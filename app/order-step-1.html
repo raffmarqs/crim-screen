@@ -47,21 +47,12 @@
         </div>
       </nav>
       <!--Content-->
-      <section class="row content">
+      <section class="row container content">
         <!-- Searching Parameters-->
-        <section class="search-parameters">
-          <h1 class="search-parameters-heading">You are searching for records on</h1>
-          <ul class="small-block-grid-2 parameters-list">
-            <li><span class="parameters-title">First Name</span><br>Thomas</li>
-            <li><span class="parameters-title">Last Name</span><br>Thomas</li>
-            <li><span class="parameters-title">State</span><br>NC</li>
-            <li><span class="parameters-title">Date of Birth</span><br>1979 / 03 / 07</li>
-          </ul>
-        </section>
-        <!-- State search-->
+        <h1 class="text-center">Select the state you would like to search</h1>
         <section class="stateChoice">
           <form action="#" data-abide>
-            <select name="state">
+            <select name="state" required>
               <option selected="" disabled="" value="">State</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -116,86 +107,8 @@
               <option value="WY">Wyoming</option>
             </select><small class="error">Please, select one state above.</small>
           </form>
-          <section class="stateChoice-info">
-            <ul class="small-block-grid-3">
-              <li><span class="stateChoice-info-title">Availability</span><br>Instant</li>
-              <li><span class="stateChoice-info-title">Price</span><br>$18.95</li>
-              <li><span class="stateChoice-info-title">Coverage</span><br><a href="#" data-reveal-id="coverage-modal">Click Here</a></li>
-            </ul>
-            <input type="submit" value="Order Now" class="button radius expand"><img alt="United States of America Map" src="images/bg-us-states.png" class="usa-map">
-          </section>
+          <input type="submit" value="Next Step" class="button radius expand"><img alt="United States of America Map" src="images/bg-us-states.png" class="usa-map">
         </section>
-        <!-- Modal-->
-        <div id="coverage-modal" data-reveal class="reveal-modal">
-          <div>
-            <h2 class="coverage-modal-title">Arizona Criminal Record Search</h2><a class="close-reveal-modal close-x">&#215;</a>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <ul class="coverage-modal-list">
-            <li>
-              <dl>
-                <dt>Arizona Court Records</dt>
-                <dd>Court records of statewide felony and misdemeanor dispositions from all counties except Pima and Maricopa since 1987. Results may show the defendant's name, DOB, identification number, record type, charge(s), disposition, physical description and sentence. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Corrections Records</dt>
-                <dd>Corrections records of statewide felony criminal convictions on persons who have been sentenced to serve time at a state facility since 1985. Results may show the defendant's name, DOB, identification number, record type, charge(s), disposition, disposition date, physical description and sentence. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Pima County (metro Tucson) Court Records</dt>
-                <dd>Court records of felony and misdemeanor dispositions since 1990. Search results may show the defendant's name, DOB, charges(s), disposition, disposition date, physical description and sentence. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Maricopa County Inmate Records</dt>
-                <dd>Countywide felony, misdemeanor and traffic violation records. Search results may show the defendant's name, DOB, sex, race, height, weight, hair&eye color and booking date. These records do not mean a guilty charge on the person searched. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Sex Offender Records</dt>
-                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Sex Offender Records</dt>
-                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Sex Offender Records</dt>
-                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Sex Offender Records</dt>
-                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Sex Offender Records</dt>
-                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt>Arizona Sex Offender Records</dt>
-                <dd>Level 2 and Level 3 Sex offenders sentenced since June 1996. Records updated regularly.</dd>
-              </dl>
-            </li>
-          </ul>
-        </div>
       </section>
       <!--Footer-->
       <footer class="second-nav">
@@ -214,7 +127,7 @@
     <!--Modals-->
     <div id="loginModal" data-reveal class="tiny reveal-modal">
       <h4 class="text-center">Members Area</h4>
-      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
       <form action="order-step-1.html" class="small-10 small-centered columns">
         <div class="row">
           <label>Email
@@ -240,7 +153,7 @@
         <div class="row">
           <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
         </div>
-        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
       </form>
     </div>
   </body>

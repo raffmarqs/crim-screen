@@ -47,7 +47,7 @@
         </div>
       </nav>
       <!--Content-->
-      <section class="row content">
+      <section class="row container content">
         <!-- Search Form-->
         <section class="small-6 columns">
           <!--Heading-->
@@ -67,12 +67,12 @@
               <ul class="small-block-grid-3">
                 <li>         
                   <select name="year" class="form-search-dob">
-                    <option selected disabled value="">Year*</option>
+                    <option selected disabled value="">Year</option>
                   </select>
                 </li>
                 <li>
                   <select name="month" class="form-search-dob">
-                    <option selected disabled value="">Month*</option>
+                    <option selected disabled value="">Month</option>
                     <option value="January">(01) Jan</option>
                     <option value="February">(02) Feb</option>
                     <option value="March">(03) Mar</option>
@@ -89,7 +89,7 @@
                 </li>
                 <li>
                   <select name="day" class="form-search-dob">
-                    <option selected disabled value="">Day*</option>
+                    <option selected disabled value="">Day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -153,7 +153,7 @@
     <!--Modals-->
     <div id="loginModal" data-reveal class="tiny reveal-modal">
       <h4 class="text-center">Members Area</h4>
-      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
       <form action="order-step-1.html" class="small-10 small-centered columns">
         <div class="row">
           <label>Email
@@ -179,7 +179,7 @@
         <div class="row">
           <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
         </div>
-        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
       </form>
     </div>
   </body>

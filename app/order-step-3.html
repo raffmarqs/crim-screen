@@ -47,7 +47,7 @@
         </div>
       </nav>
       <!--Content-->
-      <section class="row content">
+      <section class="row container content">
         <!-- Page Title-->
         <h1 class="text-center">Complete order</h1>
         <!-- Table Cart-->
@@ -65,12 +65,15 @@
             <tbody>
               <tr>
                 <td class="text-left">
-                  <p>Alaska Criminal Record Search</p>
-                  <ul class="small-block-grid-2">
-                    <li><span class="parameters-title">First Name</span><br>Thomas</li>
-                    <li>   <span class="parameters-title">Last Name</span><br>Green</li>
-                    <li><span class="parameters-title">State</span><br>AK</li>
-                    <li><span class="parameters-title">Date of Birth</span><br>03/12/19 79</li>
+                  <ul class="small-block-grid-2 cart-parameters-list">
+                    <li class="parameters-title">First Name</li>
+                    <li>Thomas                </li>
+                    <li class="parameters-title">Last Name</li>
+                    <li>Green</li>
+                    <li class="parameters-title">State</li>
+                    <li>NC</li>
+                    <li class="parameters-title">Date of Birth</li>
+                    <li>22/08/1987</li>
                   </ul>
                 </td>
                 <td>$18.95</td>
@@ -81,7 +84,7 @@
             </tbody>
           </table>
           <div class="cart-expansion small-12 columns">
-            <div class="small-6 columns small-centered"><a class="button green radius expand">Add an additional person to your search</a></div>
+            <div class="small-3 columns small-offset-9"><a class="button grey radius expand tiny">Continue Shopping</a></div>
           </div>
         </div>
         <!-- Order Information -->
@@ -90,7 +93,7 @@
             <!-- Billing Information-->
             <div class="row billing-info">
               <div class="row">
-                <h3 class="small-12 columns">Personal Information</h3>
+                <h3 class="small-12 columns">Billing Information</h3>
               </div>
               <div class="row">
                 <!--Left Column-->
@@ -371,7 +374,7 @@
     <!--Modals-->
     <div id="loginModal" data-reveal class="tiny reveal-modal">
       <h4 class="text-center">Members Area</h4>
-      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
+      <p class="small-10 columns small-centered reveal-modal-subtitle">Sign in to your First Choice account below or <a href="#" class="link-modal" data-reveal-id="passwordRecoverModal">recover your password</a></p><a class="close-reveal-modal">&#215;</a>
       <form action="order-step-1.html" class="small-10 small-centered columns">
         <div class="row">
           <label>Email
@@ -397,7 +400,7 @@
         <div class="row">
           <input type="submit" value="Recover Password" class="button dark-blue radius expand no-margin">
         </div>
-        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal">Back</a></div>
+        <div class="row text-center reveal-modal-back"><a data-reveal-id="loginModal" class="link-modal">Back</a></div>
       </form>
     </div>
   </body>

@@ -1,0 +1,56 @@
+extends includes/layout-template
+
+block content
+  div.row
+    div.small-12.columns.owl-carousel.office-gallery
+      div: img(src="images/office-img-1.jpg", alt="")
+      div: img(src="images/office-img-2.jpg", alt="")
+      div: img(src="images/office-img-3.jpg", alt="")
+      div: img(src="images/office-img-4.jpg", alt="")
+      div: img(src="images/office-img-5.jpg", alt="")
+  
+  div.row
+    div.small-5.columns
+          h4 Contact Us
+          p We are here to answer any questions you may have about our First-Choice Tenant's experiences. Even if there is something you have always wanted to experience and can't find it on First-Choice Tenant, let us know
+          .row
+            form.small-10.columns.end
+              label Name
+                    input(type="text")
+              label Email
+                    input(type="email")        
+              label Message
+                    textarea(style="resize:vertical")
+              label How Much is 5+6? (Security Question)
+                    input(type="number")
+              input(type="submit",value="Send",class="button green radius expand")
+
+
+    div.small-5.small-offset-1.columns.text-right
+          h4 Telephone
+          p (704) 945-7150 / Ext 23v
+
+          h4 Address
+          p 6135 Park South Rd<br>Suite 510, Office 562<br>Charlotte NC 28210
+          iframe(width="350", height="250", frameborder="0", style="border:0", src="https://www.google.com/maps/embed/v1/place?q=6135%20Park%20South%20Rd%20charlotte&key=AIzaSyAPmOUuh567QKXqRFSH-kmaMEpU0GQ9hpY")
+        
+
+block append-to-scripts
+    
+    //JS for the Gallery
+    link(rel="stylesheet", href="css/owl.carousel.css")
+    //CSS for the Gallery
+    script(src="js/owl.carousel.min.js")  
+
+    script.
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          items:1,
+          nav:true,
+          animateOut:'fadeOut',
+          loop:true,
+          touchDrag: true,
+          autoplay:true,
+          autoplayHoverPause:true,
+        });
+      });

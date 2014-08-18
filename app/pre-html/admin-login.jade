@@ -1,0 +1,28 @@
+extends includes/layout-template-clean
+
+block content
+  .small-6.columns.small-centered
+    .text-center
+      a.logo(href="#", name="CrimScan - Online Background Checks")
+    .panel.admin-login-box
+      h4.text-center Admin Area
+      form(action="#", data-abide)
+        div
+          label
+            | Username
+            input(type="text")
+
+          label
+            | Password
+            input(type="password")
+        small.error Username or password isn't valid. Try again
+        input.button.radius.expand(type="submit", value="Log in")
+
+
+block footer
+  footer.second-nav
+    .row.container.text-center
+      a(href="index.html") Back to the Website
+
+
+  
